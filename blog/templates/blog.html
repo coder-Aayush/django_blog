@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+<html>
+<head>
+   {% block body %}
+   {% load static %}
+   <title>{{blog.title}} - Programming World</title>
+</head>
+
+
+<!-- Page Header -->
+<div id="post-header" class="page-header">
+   <div class="background-img" style="background-image: url('{% static 'img/blog-backgorund.jpg' %}');"></div>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-10">
+            <div class="post-meta">
+               <a class="post-category cat-2">{{blog.category}}</a>
+               <span class="post-date">{{blog.date}}</span>
+            </div>
+            <h1 style="color:white; font-weight:bolder;">{{blog.title}}</h1>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- /Page Header -->
+</header>
+<!-- /Header -->
+<!-- section -->
+<div class="section">
+<!-- container -->
+<div class="container">
+   <!-- row -->
+   <div class="row">
+      <!-- Post content -->
+      <div class="col-md-20">
+         <div class="section-row sticky-container">
+            <div class="main-post">
+               <h1 style="color:orange;">Title: {{blog.title}}</h1>
+               <hr>
+               <p>{{blog.body|safe}}</p>
+            </div>
+            <div class="post-shares sticky-shares">
+               <a onclick="window.open('https://www.facebook.com/sharer.php?u={{ request.build_absolute_uri }}', 'Facebook Share',width=620,height=420);return false;"><i class="fa fa-facebook"></i></a>
+               <a onclick="window.open('https://www.twitter.com/intent/tweet?text={{ request.build_absolute_uri }}', 'Twitter Share',width=430,height=200);return false;" class="share-twitter"><i class="fa fa-twitter"></i></a>
+               <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title=#visit_this%websiteprogram&source=LinkedIn" target="_blank" class="share-linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+         </div>
+         <!-- ad -->
+         <div class="section-row text-center">
+            <a href="#" style="display: inline-block;margin: auto;">
+            <img class="img-responsive" src="{% static 'img/ad-2.jpg' %}" alt="">
+            </a>
+         </div>
+         <!-- ad -->
+         <!-- author -->
+         <div class="section-row">
+            <div class="post-author">
+               <div class="media">
+                  <div class="media-left">
+                     <img class="media-object" src="{% static 'img/author.png' %}" alt="Author">
+                  </div>
+                  <div class="media-body">
+                     <div class="media-heading">
+                        <h3>Aayush Bhattarai</h3>
+                     </div>
+                     <p style="color:black;">Frontend web developer and web developer. Started to learn to code 1/2 years ago and now I am familiar with CSS/HTML/JavaScript (jQuery) and Python. I mostly use Python for web development.</p>
+                     <ul class="author-social">
+                        <li><a href="https://bit.ly/2DEvkhz" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://bit.ly/2N6DCTH" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://bit.ly/2GJKsxA" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /author -->
+         <!-- comments -->
+         <div class="section-row">
+            <div class="section-title">
+               <h2>Comment</h2>
+            </div>
+            <div class="post-comments" style="margin-left:50px;">
+               <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-numposts="5"></div>
+            </div>
+         </div>
+      </div>
+      <!-- /row -->
+   </div>
+   <!-- /container -->
+</div>
+<!-- /section -->
+{% endblock %}

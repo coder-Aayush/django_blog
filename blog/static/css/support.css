@@ -1,0 +1,25 @@
+body
+{
+    margin:0;
+    padding:0;
+}
+h1
+{
+    text-align:center;
+    padding-top: 100px;
+    color: red;
+}
+.all
+{
+    font-weight:bolder;
+    font-size: 20px;
+    text-align:center;
+}
+.donate
+{
+    border: 2px solid black;
+}
+.note
+{
+    border: 1px solid blue;
+}

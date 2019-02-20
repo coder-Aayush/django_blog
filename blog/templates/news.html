@@ -1,0 +1,39 @@
+<html>
+{% load static %}
+  <head>
+    <title>News - Programming World</title>
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+  </head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="middle">
+
+    <h2>The Features of News will be added. To be Notified submit you email below.</h2>
+    <form action="{% url 'news' %}" METHOD="post">
+      {% csrf_token %}
+    <input type="email" class="email-field" name="email" placeholder="  email here" required>
+    <button>Submit</button>
+      </form>
+  <h2 style="color:black;">
+      <a class="home" href="{% url 'home' %}">Home</a>
+          ·
+          <a class="home" href="{% url 'about' %}">About</a>
+          ·
+          <a class="home" href="{% url 'contact' %}">Contact</a>
+  </h2>
+  </div>
+
+  <footer>
+    <p>Copyright @Programming World {% now 'Y' %}</p>
+  </footer>
+
+</div><!-- /wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+</body>
+
+</html>
