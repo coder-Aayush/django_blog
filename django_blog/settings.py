@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -115,25 +117,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-'''
-STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR,'media/')
+
+STATIC_URL = '/static/'
 
 STATIC_DIR = [
     os.path.join(BASE_DIR,"blog/static"),
     ]
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
-'''
-
-CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR,'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 STATIC_URL = '/static/'
 
-STATIC_DIR = os.path.join(BASE_DIR, "live-static", "static-root")
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 
-MEDIA_URL = '/media/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "live-media-files", "media-root")
+# Activate Django-Heroku.
+django_heroku.settings(locals())
