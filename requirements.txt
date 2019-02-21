@@ -5,6 +5,7 @@ django-heroku==0.3.1
 django-js-asset==1.2.1
 django-markdown==0.8.4
 django-markdown-app==0.9.5
+gunicorn==19.9.0
 Markdown==3.0.1
 Pillow==5.4.1
 psycopg2==2.7.7
