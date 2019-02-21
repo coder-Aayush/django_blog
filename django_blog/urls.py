@@ -3,9 +3,10 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from blog import views
+from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls import handler404,handler500
 import blog
-
 
 
 urlpatterns = [
@@ -18,6 +19,11 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+if not settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
 
 handler404 = 'blog.views.handler404'
 handler500 = 'blog.views.handler500'
