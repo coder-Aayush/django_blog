@@ -19,8 +19,8 @@ ALLOWED_HOSTS = ['*']
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'learntocode08@gmail.com'
-EMAIL_HOST_PASSWORD = 'iamtheadmin@aayush'
+EMAIL_HOST_USER = 'bhattaraiaayush08@gmail.com'
+EMAIL_HOST_PASSWORD = 'your password'
 EMAIL_PORT = 587
 
 
