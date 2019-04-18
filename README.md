@@ -1,8 +1,10 @@
 # django_blog
-Making Blog using Django
 
-To run this app follow these steps:
+## Making Blog using Django
 
+### To run this app follow these steps:
+
+'''Python
 git clone {link}
 
 pip install virtualenv
@@ -18,3 +20,9 @@ python manage.py makemigrations
 python manage.py migrate
 
 python manage.py runserver
+'''
+# Me at Social Site.
+[Facebook](https://www.facebook.com/aayush.bhattarai.9480)
+[Instagram](https://www.instagram.com/iamaayush77/)
+
+> Keep Coding
