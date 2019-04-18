@@ -1,4 +1,3 @@
-# django_blog
 
 ## Making Blog using Django
 
