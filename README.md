@@ -4,8 +4,8 @@
 
 ### To run this app follow these steps:
 
-
-`git clone {link}
+'''python
+git clone {link}
 
 pip install virtualenv
 
@@ -19,7 +19,8 @@ python manage.py makemigrations
 
 python manage.py migrate
 
-python manage.py runserver`
+python manage.py runserver
+'''
 
 # Me at Social Site.
 [Facebook](https://www.facebook.com/aayush.bhattarai.9480)
