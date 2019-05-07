@@ -22,8 +22,8 @@ python manage.py runserver
 
 
 # Me at Social Site.
-[Facebook](https://www.facebook.com/aayush.bhattarai.9480)
-[Instagram](https://www.instagram.com/iamaayush77/)
+[Facebook](https://www.facebook.com/theaayushb)
+[Instagram](https://www.instagram.com/theaayushbhattarai/)
 
 
 > Keep Coding
